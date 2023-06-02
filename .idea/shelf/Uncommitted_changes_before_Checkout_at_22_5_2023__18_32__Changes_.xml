@@ -1,0 +1,29 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_22_5_2023,_18_32_[Changes]" date="1684744356110" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2023,_18_32_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 22/5/2023, 18:32 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="pacman/out/production/pacman/src/Portal.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2023,_18_32_[Changes]/Portal.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="pacman/out/production/pacman/src/Driver.class" />
+    <option name="AFTER_PATH" value="pacman/out/production/pacman/src/Driver.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2023,_18_32_[Changes]/Driver.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="pacman/out/production/pacman/src/PacManGameGrid.class" />
+    <option name="AFTER_PATH" value="pacman/out/production/pacman/src/PacManGameGrid.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2023,_18_32_[Changes]/PacManGameGrid.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="pacman/out/production/pacman/src/PortalType$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2023,_18_32_[Changes]/PortalType$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="pacman/out/production/pacman/src/PortalType.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_5_2023,_18_32_[Changes]/PortalType.class" />
+  </binary>
+</changelist>

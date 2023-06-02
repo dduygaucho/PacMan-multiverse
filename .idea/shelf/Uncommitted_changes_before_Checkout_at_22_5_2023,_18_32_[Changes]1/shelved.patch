@@ -1,0 +1,307 @@
+Index: pacman/src/Driver.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package src;\n\nimport src.utility.GameCallback;\nimport src.utility.PropertiesLoader;\nimport src.matachi.mapeditor.editor.Controller;\n\nimport java.io.File;\nimport java.util.Properties;\n\npublic class Driver {\n    public static final String DEFAULT_PROPERTIES_PATH = \"properties/test2.properties\";\n    /**\n     * Starting point\n     * @param args the command line arguments\n     */\n\n    public static void main(String args[]) {\n        String propertiesPath = DEFAULT_PROPERTIES_PATH;\n\n        if (args.length > 0) {\n            propertiesPath = args[0];\n        }\n        final Properties properties = PropertiesLoader.loadPropertiesFile(propertiesPath);\n        GameCallback gameCallback = new GameCallback();\n\n        new Game(gameCallback, properties);\n        String filemap = \"/Users/Linh Dan /Documents/Java/SWEN30006/project/2023-sem1-projectassignment2-mon-17-15-team-03/pacman/sample_map2.xml\";\n        new Controller(filemap);\n\n//        // load argument\n//        String input = args[0];\n//\n//        // Starting the editor with no argument will start in Edit Mode with no current map.\n//        if (args.length == 0) {\n//            Facade driver = new Facade();\n//        } else if (args.length > 0) {\n//            String extension = \"\";\n//\n//            int i = input.lastIndexOf('.');\n//            if (i > 0) {\n//                extension = input.substring(i + 1);\n//            }\n//\n//            // Starting the editor with an existing map as an argument will start in Edit Mode on that map.\n//            if (extension.equals(\"xml\")) {\n//                Facade driver = new Facade();\n//                driver.buildMap(input);\n//            }\n//            // Starting the editor with a folder as an argument will start in Test Mode, that is,\n//            // start playing the game levels in that folder.\n//            else{\n//                File folder = new File(input);\n//                File[] files = folder.listFiles();\n//                if (files != null){\n//                    for (File file: files){\n//                        Facade driver = new Facade();\n//                        // start test mode\n//                        new Game(new GameCallback(), new Properties(), file);\n//                    }\n//                }\n//            }\n        }\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pacman/src/Driver.java b/pacman/src/Driver.java
+--- a/pacman/src/Driver.java	(revision 5c923603a0045079d4e5a0f4feb51fc541ddc6d0)
++++ b/pacman/src/Driver.java	(date 1684744356058)
+@@ -8,7 +8,7 @@
+ import java.util.Properties;
+ 
+ public class Driver {
+-    public static final String DEFAULT_PROPERTIES_PATH = "properties/test2.properties";
++    public static final String DEFAULT_PROPERTIES_PATH = "properties/test1.properties";
+     /**
+      * Starting point
+      * @param args the command line arguments
+Index: pacman/Log.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[PacMan] Location: 1-1. Score: 0. Pills: 0\n[Troll] Location: 17-9\n[PacMan] Location: 2-2. Eat Pill/Item: gold\n[PacMan] Location: 1-2. Score: 5. Pills: 1\n[Troll] Location: 16-9\n[PacMan] Location: 3-3. Eat Pill/Item: pills\n[PacMan] Location: 1-3. Score: 6. Pills: 2\n[Troll] Location: 15-9\n[PacMan] Location: 4-4. Eat Pill/Item: pills\n[PacMan] Location: 1-4. Score: 7. Pills: 3\n[Troll] Location: 15-8\n[PacMan] Location: 5-5. Eat Pill/Item: pills\n[PacMan] Location: 1-5. Score: 8. Pills: 4\n[Troll] Location: 15-7\n[PacMan] Location: 6-6. Eat Pill/Item: pills\n[PacMan] Location: 1-6. Score: 9. Pills: 5\n[Troll] Location: 16-7\n[PacMan] Location: 7-7. Eat Pill/Item: pills\n[PacMan] Location: 1-7. Score: 10. Pills: 6\n[Troll] Location: 16-6\n[PacMan] Location: 8-8. Eat Pill/Item: ice\n[PacMan] Location: 1-8. Score: 10. Pills: 6\n[Troll] Location: 16-5\n[PacMan] Location: 9-9. Eat Pill/Item: pills\n[PacMan] Location: 1-9. Score: 11. Pills: 7\n[Troll] Location: 17-5\n[PacMan] Location: 1-9. Score: 11. Pills: 7\n[Troll] Location: 18-5\n[PacMan] Location: 1-9. Score: 11. Pills: 7\n[Troll] Location: 18-6\n[PacMan] Location: 1-9. Score: 11. Pills: 7\n[Troll] Location: 18-7\n[PacMan] Location: 1-9. Score: 11. Pills: 7\n[Troll] Location: 18-8\n[PacMan] Location: 2-9. Score: 11. Pills: 7\n[Troll] Location: 18-9\n[PacMan] Location: 3-9. Score: 11. Pills: 7\n[Troll] Location: 17-9\n[PacMan] Location: 9-9. Eat Pill/Item: gold\n[PacMan] Location: 4-9. Score: 16. Pills: 8\n[Troll] Location: 16-9\nYOU WIN\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pacman/Log.txt b/pacman/Log.txt
+--- a/pacman/Log.txt	(revision 5c923603a0045079d4e5a0f4feb51fc541ddc6d0)
++++ b/pacman/Log.txt	(date 1684744356061)
+@@ -1,42 +1,84 @@
+-[PacMan] Location: 1-1. Score: 0. Pills: 0
+-[Troll] Location: 17-9
+-[PacMan] Location: 2-2. Eat Pill/Item: gold
+-[PacMan] Location: 1-2. Score: 5. Pills: 1
+-[Troll] Location: 16-9
+-[PacMan] Location: 3-3. Eat Pill/Item: pills
+-[PacMan] Location: 1-3. Score: 6. Pills: 2
+-[Troll] Location: 15-9
+-[PacMan] Location: 4-4. Eat Pill/Item: pills
+-[PacMan] Location: 1-4. Score: 7. Pills: 3
+-[Troll] Location: 15-8
+-[PacMan] Location: 5-5. Eat Pill/Item: pills
+-[PacMan] Location: 1-5. Score: 8. Pills: 4
+-[Troll] Location: 15-7
+-[PacMan] Location: 6-6. Eat Pill/Item: pills
+-[PacMan] Location: 1-6. Score: 9. Pills: 5
+-[Troll] Location: 16-7
++[PacMan] Location: 11-7. Score: 0. Pills: 0
++[Troll] Location: 11-5
++[PacMan] Location: 11-7. Score: 0. Pills: 0
++[Troll] Location: 10-5
++[PacMan] Location: 11-7. Score: 0. Pills: 0
++[Troll] Location: 9-5
++[PacMan] Location: 11-7. Score: 0. Pills: 0
++[Troll] Location: 8-5
++[PacMan] Location: 7-7. Eat Pill/Item: ice
++[PacMan] Location: 10-7. Score: 0. Pills: 0
++[Troll] Location: 9-5
++[PacMan] Location: 7-7. Eat Pill/Item: gold
++[PacMan] Location: 7-7. Eat Pill/Item: pills
++[PacMan] Location: 8-7. Score: 6. Pills: 2
++[Troll] Location: 10-5
++[PacMan] Location: 7-7. Eat Pill/Item: pills
+ [PacMan] Location: 7-7. Eat Pill/Item: pills
+-[PacMan] Location: 1-7. Score: 10. Pills: 6
+-[Troll] Location: 16-6
+-[PacMan] Location: 8-8. Eat Pill/Item: ice
+-[PacMan] Location: 1-8. Score: 10. Pills: 6
+-[Troll] Location: 16-5
++[PacMan] Location: 6-7. Score: 8. Pills: 4
++[Troll] Location: 11-5
++[PacMan] Location: 6-7. Score: 8. Pills: 4
++[Troll] Location: 10-5
++[PacMan] Location: 8-8. Eat Pill/Item: pills
+ [PacMan] Location: 9-9. Eat Pill/Item: pills
+-[PacMan] Location: 1-9. Score: 11. Pills: 7
+-[Troll] Location: 17-5
+-[PacMan] Location: 1-9. Score: 11. Pills: 7
+-[Troll] Location: 18-5
+-[PacMan] Location: 1-9. Score: 11. Pills: 7
+-[Troll] Location: 18-6
+-[PacMan] Location: 1-9. Score: 11. Pills: 7
+-[Troll] Location: 18-7
+-[PacMan] Location: 1-9. Score: 11. Pills: 7
+-[Troll] Location: 18-8
+-[PacMan] Location: 2-9. Score: 11. Pills: 7
+-[Troll] Location: 18-9
+-[PacMan] Location: 3-9. Score: 11. Pills: 7
+-[Troll] Location: 17-9
++[PacMan] Location: 6-9. Score: 10. Pills: 6
++[Troll] Location: 10-4
++[PacMan] Location: 9-9. Eat Pill/Item: pills
++[PacMan] Location: 7-9. Score: 11. Pills: 7
++[Troll] Location: 10-3
++[PacMan] Location: 9-9. Eat Pill/Item: pills
++[PacMan] Location: 9-9. Eat Pill/Item: pills
++[PacMan] Location: 9-9. Score: 13. Pills: 9
++[Troll] Location: 11-3
+ [PacMan] Location: 9-9. Eat Pill/Item: gold
+-[PacMan] Location: 4-9. Score: 16. Pills: 8
+-[Troll] Location: 16-9
+-YOU WIN
++[PacMan] Location: 9-9. Eat Pill/Item: pills
++[PacMan] Location: 11-9. Score: 19. Pills: 11
++[Troll] Location: 12-3
++[PacMan] Location: 9-9. Eat Pill/Item: pills
++[PacMan] Location: 9-9. Eat Pill/Item: pills
++[PacMan] Location: 13-9. Score: 21. Pills: 13
++[Troll] Location: 13-3
++[PacMan] Location: 8-8. Eat Pill/Item: pills
++[PacMan] Location: 7-7. Eat Pill/Item: pills
++[PacMan] Location: 13-7. Score: 23. Pills: 15
++[Troll] Location: 13-2
++[PacMan] Location: 7-7. Eat Pill/Item: pills
++[PacMan] Location: 14-7. Score: 24. Pills: 16
++[Troll] Location: 13-1
++[PacMan] Location: 7-7. Eat Pill/Item: pills
++[PacMan] Location: 7-7. Eat Pill/Item: pills
++[PacMan] Location: 16-7. Score: 26. Pills: 18
++[Troll] Location: 14-1
++[PacMan] Location: 16-7. Score: 26. Pills: 18
++[TX5] Location: 10-5
++[Troll] Location: 15-1
++[PacMan] Location: 8-8. Eat Pill/Item: pills
++[PacMan] Location: 15-8. Score: 27. Pills: 19
++[TX5] Location: 11-5
++[Troll] Location: 16-1
++[PacMan] Location: 9-9. Eat Pill/Item: pills
++[PacMan] Location: 9-9. Eat Pill/Item: pills
++[PacMan] Location: 9-9. Eat Pill/Item: pills
++[PacMan] Location: 17-9. Score: 30. Pills: 22
++[TX5] Location: 10-5
++[Troll] Location: 17-1
++[PacMan] Location: 9-9. Eat Pill/Item: pills
++[PacMan] Location: 18-9. Score: 31. Pills: 23
++[TX5] Location: 9-5
++[Troll] Location: 18-1
++[PacMan] Location: 8-8. Eat Pill/Item: pills
++[PacMan] Location: 18-8. Score: 32. Pills: 24
++[TX5] Location: 8-5
++[Troll] Location: 18-2
++[PacMan] Location: 7-7. Eat Pill/Item: pills
++[PacMan] Location: 6-6. Eat Pill/Item: pills
++[PacMan] Location: 18-6. Score: 34. Pills: 26
++[TX5] Location: 9-5
++[Troll] Location: 18-3
++[PacMan] Location: 5-5. Eat Pill/Item: pills
++[PacMan] Location: 4-4. Eat Pill/Item: pills
++[PacMan] Location: 18-4. Score: 36. Pills: 28
++[TX5] Location: 10-5
++[Troll] Location: 18-4
++[PacMan] Location: 3-3. Eat Pill/Item: pills
++GAME OVER
+Index: pacman/src/PortalType.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pacman/src/PortalType.java b/pacman/src/PortalType.java
+new file mode 100644
+--- /dev/null	(date 1684744356065)
++++ b/pacman/src/PortalType.java	(date 1684744356065)
+@@ -0,0 +1,21 @@
++package src;
++
++public enum PortalType {
++    PortalYellow,
++    PortalDarkGray,
++    PortalDarkGold,
++    PortalWhite;
++
++    public String getImageName() {
++        switch (this) {
++            case PortalYellow: return "j_portalYellowTile.png";
++            case PortalDarkGray: return "l_portalDarkGreyTile.png";
++            case PortalDarkGold: return "k_portalDarkGoldTile.png";
++            case PortalWhite: return "i_portalWhiteTile.png";
++            default: {
++                assert false;
++            }
++        }
++        return null;
++    }
++}
+\ No newline at end of file
+Index: pacman/src/Portal.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pacman/src/Portal.java b/pacman/src/Portal.java
+new file mode 100644
+--- /dev/null	(date 1684744356063)
++++ b/pacman/src/Portal.java	(date 1684744356063)
+@@ -0,0 +1,16 @@
++package src;
++
++import ch.aplu.jgamegrid.*;
++import src.utility.GameCallback;
++
++import java.awt.*;
++import java.util.ArrayList;
++import java.util.Properties;
++
++public class Portal {
++    private PortalType type;
++    public Portal() {
++
++    }
++
++}
+Index: pacman/out/production/pacman/Log.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[PacMan] Location: 1-1. Score: 0. Pills: 0\n[Troll] Location: 17-9\n[PacMan] Location: 2-2. Eat Pill/Item: gold\n[PacMan] Location: 1-2. Score: 5. Pills: 1\n[Troll] Location: 16-9\n[PacMan] Location: 3-3. Eat Pill/Item: pills\n[PacMan] Location: 1-3. Score: 6. Pills: 2\n[Troll] Location: 15-9\n[PacMan] Location: 4-4. Eat Pill/Item: pills\n[PacMan] Location: 1-4. Score: 7. Pills: 3\n[Troll] Location: 15-8\n[PacMan] Location: 5-5. Eat Pill/Item: pills\n[PacMan] Location: 1-5. Score: 8. Pills: 4\n[Troll] Location: 15-7\n[PacMan] Location: 6-6. Eat Pill/Item: pills\n[PacMan] Location: 1-6. Score: 9. Pills: 5\n[Troll] Location: 16-7\n[PacMan] Location: 7-7. Eat Pill/Item: pills\n[PacMan] Location: 1-7. Score: 10. Pills: 6\n[Troll] Location: 16-6\n[PacMan] Location: 8-8. Eat Pill/Item: ice\n[PacMan] Location: 1-8. Score: 10. Pills: 6\n[Troll] Location: 16-5\n[PacMan] Location: 9-9. Eat Pill/Item: pills\n[PacMan] Location: 1-9. Score: 11. Pills: 7\n[Troll] Location: 17-5\n[PacMan] Location: 1-9. Score: 11. Pills: 7\n[Troll] Location: 18-5\n[PacMan] Location: 1-9. Score: 11. Pills: 7\n[Troll] Location: 18-6\n[PacMan] Location: 1-9. Score: 11. Pills: 7\n[Troll] Location: 18-7\n[PacMan] Location: 1-9. Score: 11. Pills: 7\n[Troll] Location: 18-8\n[PacMan] Location: 2-9. Score: 11. Pills: 7\n[Troll] Location: 18-9\n[PacMan] Location: 3-9. Score: 11. Pills: 7\n[Troll] Location: 17-9\n[PacMan] Location: 9-9. Eat Pill/Item: gold\n[PacMan] Location: 4-9. Score: 16. Pills: 8\n[Troll] Location: 16-9\nYOU WIN\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pacman/out/production/pacman/Log.txt b/pacman/out/production/pacman/Log.txt
+--- a/pacman/out/production/pacman/Log.txt	(revision 5c923603a0045079d4e5a0f4feb51fc541ddc6d0)
++++ b/pacman/out/production/pacman/Log.txt	(date 1684744356067)
+@@ -24,19 +24,3 @@
+ [PacMan] Location: 9-9. Eat Pill/Item: pills
+ [PacMan] Location: 1-9. Score: 11. Pills: 7
+ [Troll] Location: 17-5
+-[PacMan] Location: 1-9. Score: 11. Pills: 7
+-[Troll] Location: 18-5
+-[PacMan] Location: 1-9. Score: 11. Pills: 7
+-[Troll] Location: 18-6
+-[PacMan] Location: 1-9. Score: 11. Pills: 7
+-[Troll] Location: 18-7
+-[PacMan] Location: 1-9. Score: 11. Pills: 7
+-[Troll] Location: 18-8
+-[PacMan] Location: 2-9. Score: 11. Pills: 7
+-[Troll] Location: 18-9
+-[PacMan] Location: 3-9. Score: 11. Pills: 7
+-[Troll] Location: 17-9
+-[PacMan] Location: 9-9. Eat Pill/Item: gold
+-[PacMan] Location: 4-9. Score: 16. Pills: 8
+-[Troll] Location: 16-9
+-YOU WIN
+Index: pacman/pacman.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"JAVA_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\n    <exclude-output />\n    <content url=\"file://$MODULE_DIR$\">\n      <sourceFolder url=\"file://$MODULE_DIR$\" isTestSource=\"false\" />\n    </content>\n    <orderEntry type=\"inheritedJdk\" />\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n    <orderEntry type=\"library\" name=\"lib\" level=\"project\" />\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pacman/pacman.iml b/pacman/pacman.iml
+--- a/pacman/pacman.iml	(revision 5c923603a0045079d4e5a0f4feb51fc541ddc6d0)
++++ b/pacman/pacman.iml	(date 1684744356068)
+@@ -7,6 +7,6 @@
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+-    <orderEntry type="library" name="lib" level="project" />
++    <orderEntry type="library" exported="" name="lib" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: pacman/out/production/pacman/pacman.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"JAVA_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\n    <exclude-output />\n    <content url=\"file://$MODULE_DIR$\">\n      <sourceFolder url=\"file://$MODULE_DIR$\" isTestSource=\"false\" />\n    </content>\n    <orderEntry type=\"inheritedJdk\" />\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n    <orderEntry type=\"library\" name=\"lib\" level=\"project\" />\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pacman/out/production/pacman/pacman.iml b/pacman/out/production/pacman/pacman.iml
+--- a/pacman/out/production/pacman/pacman.iml	(revision 5c923603a0045079d4e5a0f4feb51fc541ddc6d0)
++++ b/pacman/out/production/pacman/pacman.iml	(date 1684744356070)
+@@ -7,6 +7,6 @@
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+-    <orderEntry type="library" name="lib" level="project" />
++    <orderEntry type="library" exported="" name="lib" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: pacman/src/PacManGameGrid.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// PacGrid.java\npackage src;\nimport javax.xml.parsers.DocumentBuilderFactory;\nimport javax.xml.parsers.DocumentBuilder;\nimport org.w3c.dom.Document;\nimport org.w3c.dom.NodeList;\nimport org.w3c.dom.Node;\nimport org.w3c.dom.Element;\nimport java.io.File;\n\nimport ch.aplu.jgamegrid.*;\n\npublic class PacManGameGrid\n{\n  private int nbHorzCells;\n  private int nbVertCells;\n  private int[][] mazeArray;\n\n  public PacManGameGrid(int nbHorzCells, int nbVertCells)\n  {\n    this.nbHorzCells = nbHorzCells;\n    this.nbVertCells = nbVertCells;\n    mazeArray = new int[nbVertCells][nbHorzCells];\n    String maze =\n      \"xxxxxxxxxxxxxxxxxxxx\" + // 0\n      \"x....x....g...g....x\" + // 1\n      \"xgxx.x.xxxxxx.x.xx.x\" + // 2\n      \"x.x.......i.g....x.x\" + // 3\n      \"x.x.xx.xx  xx.xx.x.x\" + // 4\n      \"x......x    x......x\" + // 5\n      \"x.x.xx.xxxxxx.xx.x.x\" + // 6\n      \"x.x......gi......x.x\" + // 7\n      \"xixx.x.xxxxxx.x.xx.x\" + // 8\n      \"x...gx....g...x....x\" + // 9\n      \"xxxxxxxxxxxxxxxxxxxx\";// 10\n\n\n    // Copy structure into integer array\n    for (int i = 0; i < nbVertCells; i++)\n    {\n      for (int k = 0; k < nbHorzCells; k++) {\n        int value = toInt(maze.charAt(nbHorzCells * i + k));\n        mazeArray[i][k] = value;\n      }\n    }\n  }\n\n  // for reading new file loaded and concerting\n  public PacManGameGrid(String map){\n\n    String maze = \"\";\n\n    try {\n      // Parse XML file\n      DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();\n      DocumentBuilder builder = factory.newDocumentBuilder();\n      File xmlFile = new File(\"/Users/Linh Dan /Documents/Java/SWEN30006/project/2023-sem1-projectassignment2-mon-17-15-team-03/pacman/sample_map1.xml\");\n      Document document = builder.parse(xmlFile);\n\n      // Get the width and height\n      NodeList sizeElements = document.getElementsByTagName(\"size\");\n      Element sizeElement = (Element) sizeElements.item(0);\n      NodeList sizeChildNodes = sizeElement.getChildNodes();\n      String width = \"\";\n      String height = \"\";\n      for (int i = 0; i < sizeChildNodes.getLength(); i++) {\n        Node sizeChildNode = sizeChildNodes.item(i);\n        if (sizeChildNode.getNodeType() == Node.ELEMENT_NODE) {\n          Element element = (Element) sizeChildNode;\n          if (element.getTagName().equals(\"width\")) {\n            width = element.getTextContent();\n            this.nbHorzCells = Integer.parseInt(width);\n          } else if (element.getTagName().equals(\"height\")) {\n            height = element.getTextContent();\n            this.nbVertCells = Integer.parseInt(height);\n          }\n        }\n      }\n      mazeArray = new int[nbVertCells][nbHorzCells];\n\n      // get tile\n      NodeList rowList = document.getElementsByTagName(\"row\");\n      for (int i = 0; i < rowList.getLength(); i++) {\n        Element rowElement = (Element) rowList.item(i);\n        NodeList cellList = rowElement.getElementsByTagName(\"cell\");\n        String rowStr = \"\";\n        for (int j = 0; j < cellList.getLength(); j++) {\n          String cell = cellList.item(j).getTextContent();\n          if (cell.equals(\"WallTile\")){\n            rowStr += \"x\";\n          }else if(cell.equals(\"PathTile\")){\n            rowStr += \".\";\n          }else if (cell.equals(\"GoldTile\")){\n            rowStr += \"g\";\n          }else if (cell.equals(\"IceTile\")){\n            rowStr += \"i\";\n          }\n        }\n        maze += rowStr;\n      }\n\n    } catch (Exception e) {\n      e.printStackTrace();\n    }\n\n    // Copy structure into integer array\n    for (int i = 0; i < nbVertCells; i++)\n    {\n      for (int k = 0; k < nbHorzCells; k++) {\n        int value = toInt(maze.charAt(nbHorzCells * i + k));\n        mazeArray[i][k] = value;\n      }\n    }\n  }\n\n  public int getCell(Location location)\n  {\n    return mazeArray[location.y][location.x];\n  }\n  private int toInt(char c)\n  {\n    if (c == 'x')\n      return 0;\n    if (c == '.')\n      return 1;\n    if (c == ' ')\n      return 2;\n    if (c == 'g')\n      return 3;\n    if (c == 'i')\n      return 4;\n    return -1;\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pacman/src/PacManGameGrid.java b/pacman/src/PacManGameGrid.java
+--- a/pacman/src/PacManGameGrid.java	(revision 5c923603a0045079d4e5a0f4feb51fc541ddc6d0)
++++ b/pacman/src/PacManGameGrid.java	(date 1684744356072)
+@@ -54,7 +54,7 @@
+       // Parse XML file
+       DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+       DocumentBuilder builder = factory.newDocumentBuilder();
+-      File xmlFile = new File("/Users/Linh Dan /Documents/Java/SWEN30006/project/2023-sem1-projectassignment2-mon-17-15-team-03/pacman/sample_map1.xml");
++      File xmlFile = new File("sample_map1.xml");
+       Document document = builder.parse(xmlFile);
+ 
+       // Get the width and height
+@@ -129,6 +129,8 @@
+       return 3;
+     if (c == 'i')
+       return 4;
++    if (c == 'w')
++      return 5;
+     return -1;
+   }
+ }
